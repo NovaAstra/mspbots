@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@mspbots/tsconfig/vue3",
+  "extends": "./web.json",
+  "compilerOptions": {
+    "jsxImportSource": "vue"
+  },
+  "vueCompilerOptions": {
+    "target": 3
+  }
+}

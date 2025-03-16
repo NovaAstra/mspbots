@@ -1,0 +1,289 @@
+= `@sphere/regexp`
+:eslint-plugin-regexp: https://ota-meshi.github.io/eslint-plugin-regexp/
+
+`link:{eslint-plugin-regexp}[eslint-plugin-regexp]`
+是专门用于检查和规范 JavaScript 代码中的正则表达式的ESLint插件
+
+== ✅ 规则
+
+💼 表示在配置中启用。 +
+🟡 表示在配置中设置为警告。 +
+🚫 表示在配置中禁用。 +
+🔴 表示在配置中设置为错误。 +
+🔧 表示可通过 link:{https://eslint.org/docs/user-guide/command-line-interface#--fix}[`--fix` CLI选项]自动修复 +
+💡 表示可通过 link:{https://eslint.org/docs/latest/use/core-concepts#rule-suggestions}[编辑器建议] 手动修复 +
+⚙️ 表示规则的可配置选项
+
+=== 可能的错误
+
+[cols="3,4,1,1,1",,options="header"]
+|===
+
+| 名称 | 描述 | 💼 | 🔧 | 💡
+
+| `link:{eslint-plugin-regexp}rules/no-contradiction-with-assertion.html[regexp/no-contradiction-with-assertion]`
+| 禁止与断言相矛盾的元素
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-control-character.html[regexp/no-control-character]`
+| 禁止控制字符
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-dupe-disjunctions.html[regexp/no-dupe-disjunctions]`
+| 禁止重复的分支
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-empty-alternative.html[regexp/no-empty-alternative]`
+| 禁止没有元素的分支
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-empty-capturing-group.html[regexp/no-empty-capturing-group]`
+| 禁止捕获空内容的捕获组
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-empty-character-class.html[regexp/no-empty-character-class]`
+| 禁止不匹配任何字符的字符类
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-empty-group.html[regexp/no-empty-group]`
+| 禁止空组
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-empty-lookarounds-assertion.html[regexp/no-empty-lookarounds-assertion]`
+| 禁止空的先行断言或后行断言
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-escape-backspace.html[regexp/no-escape-backspace]`
+| 禁止转义退格符（`[\b]`）
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-invalid-regexp.html[regexp/no-invalid-regexp]`
+| 禁止在 `RegExp` 构造函数中使用无效的正则表达式字符串
+| 🔴
+| 
+| 💡
+
+| `link:{eslint-plugin-regexp}rules/no-potentially-useless-backreference.html[regexp/no-potentially-useless-backreference]`
+| 禁止引用可能未匹配的组的反向引用
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/no-super-linear-backtracking.html[regexp/no-super-linear-backtracking]`
+| 禁止指数级和多项式回溯
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/no-super-linear-move.html[regexp/no-super-linear-move]`
+| 禁止导致二次方移动的量词
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/no-useless-assertions.html[regexp/no-useless-assertions]`
+| 禁止已知总是接受（或拒绝）的断言
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/no-useless-backreference.html[regexp/no-useless-backreference]`
+| 禁止正则表达式中无用的反向引用
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/no-useless-dollar-replacements.html[regexp/no-useless-dollar-replacements]`
+| 禁止替换字符串中无用的 `$` 替换
+| 🔴
+| 
+| 
+
+| `link:{eslint-plugin-regexp}rules/strict.html[regexp/strict]`
+| 禁止不严格有效的正则表达式
+| 🔴
+| 🔧
+| 💡
+
+|===
+
+=== 风格问题
+
+[cols="1,3,1,1,1,2",options="header"]
+|===
+
+| 名称 | 描述 | 💼 | 🔧 | 💡 | ⚙️
+
+| `link:{eslint-plugin-regexp}rules/grapheme-string-literal.html[regexp/grapheme-string-literal]`
+| 强制在字符串字面量中使用单个字素
+| 🔴
+| 
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/hexadecimal-escape.html[regexp/hexadecimal-escape]`
+| 强制一致使用十六进制转义
+| 🔴
+| 🔧
+| 
+| `strict` 模式为 `true`, 强制始终使用十六进制转义; 如果 `strict` 模式为 `false`, 则禁止在所有字符上使用十六进制转义序列
+
+| `link:{eslint-plugin-regexp}rules/letter-case.html[regexp/letter-case]`
+| 强制使用你喜欢的大小写
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/match-any.html[regexp/match-any]`
+| 强制使用匹配任意字符的风格
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/no-useless-escape.html[regexp/no-useless-escape]`
+| 禁止在正则表达式中使用不必要的转义字符
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/no-useless-non-capturing-group.html[regexp/no-useless-non-capturing-group]`
+| 禁止不必要的非捕获组
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-character-class.html[regexp/prefer-character-class]`
+| 强制使用字符类
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-d.html[regexp/prefer-d]`
+| 强制使用 `\d`
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-lookaround.html[regexp/prefer-lookaround]`
+| 优先使用前瞻/后顾而不是不进行替换的捕获组
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-named-backreference.html[regexp/prefer-named-backreference]`
+| 强制使用命名的反向引用
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-named-capture-group.html[regexp/prefer-named-capture-group]`
+| 强制使用命名的捕获组
+| 🔴
+| 
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-named-replacement.html[regexp/prefer-named-replacement]`
+| 强制使用命名替换
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-plus-quantifier.html[regexp/prefer-plus-quantifier]`
+| 强制使用 `+` 量词
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-question-quantifier.html[regexp/prefer-question-quantifier]`
+| 强制使用 `?` 量词
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-result-array-groups.html[regexp/prefer-result-array-groups]`
+| 强制使用结果数组的 `groups`
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-star-quantifier.html[regexp/prefer-star-quantifier]`
+| 强制使用 `*` 量词
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-unicode-codepoint-escapes.html[regexp/prefer-unicode-codepoint-escapes]`
+| 强制使用 Unicode 码点转义
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/prefer-w.html[regexp/prefer-w]`
+| 强制使用 `\w`
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/sort-character-class-elements.html[regexp/sort-character-class-elements]`
+| 强制字符类中元素的顺序
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/sort-flags.html[regexp/sort-flags]`
+| 要求正则表达式标志按顺序排序
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/unicode-escape.html[regexp/unicode-escape]`
+| 强制一致使用 Unicode 转义或 Unicode 码点转义
+| 🔴
+| 🔧
+| 
+|
+
+| `link:{eslint-plugin-regexp}rules/unicode-property.html[regexp/unicode-property]`
+| 强制 Unicode 属性命名的一致性
+| 🔴
+| 🔧
+| 
+|
+
+|===

@@ -1,0 +1,12 @@
+{
+  "name": "mspbots-root",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {},
+  "devDependencies": {
+    "@mspbots/tsconfig": "workspace:*",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}

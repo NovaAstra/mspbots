@@ -1,0 +1,15 @@
+= `@sphere/yaml`
+:eslint-plugin-yml: https://ota-meshi.github.io/eslint-plugin-yml/rules/
+
+`link:{eslint-plugin-yml}[eslint-plugin-yml]`
+是专门用于YAML文件语法检查的ESLint插件
+
+== ✅ 规则
+
+💼 表示在配置中启用。 +
+🟡 表示在配置中设置为警告。 +
+🚫 表示在配置中禁用。 +
+🔴 表示在配置中设置为错误。 +
+🔧 表示可通过 link:{https://eslint.org/docs/user-guide/command-line-interface#--fix}[`--fix` CLI选项]自动修复 +
+💡 表示可通过 link:{https://eslint.org/docs/latest/use/core-concepts#rule-suggestions}[编辑器建议] 手动修复 +
+⚙️ 表示规则的可配置选项

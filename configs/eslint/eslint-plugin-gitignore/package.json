@@ -1,0 +1,15 @@
+{
+  "name": "@mspbots/eslint-plugin-gitignore",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@mspbots/tsconfig": "workspace:*",
+    "typescript": "~5.7.3",
+    "@types/node": "~22.10.7",
+    "eslint": "~9.18.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.18.0"
+  }
+}

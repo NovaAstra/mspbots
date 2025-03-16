@@ -1,0 +1,7 @@
+{
+  "name": "@mspbots/tsconfig",
+  "version": "1.0.0",
+  "type": "module",
+  "tsconfig": "tsconfig.json",
+  "main": "tsconfig.json"
+}
