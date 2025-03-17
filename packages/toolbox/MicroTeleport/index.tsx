@@ -15,6 +15,7 @@ export const microTeleportProps = {
     type: [String, Object] as PropType<string | HTMLElement>,
     required: true,
   },
+  disabled: Boolean
 }
 
 
