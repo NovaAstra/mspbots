@@ -11,11 +11,13 @@ export interface MicroAppOptions {
   plugins?: (app: App) => Promise<void>;
 }
 
-const createAppName = (input: string) => input
-  .replace(/\//g, '-') // 将 / 替换为 -
-  .replace(/[^a-zA-Z0-9-_]/g, '') // 移除其他非法字符
-  .replace(/@/g, '') // 直接删除 @
-  .toLowerCase(); // 转换为小写
+function createAppName(input: string) {
+  return input
+    .replace(/\//g, '-') // 将 / 替换为 -
+    .replace(/[^a-zA-Z0-9-_]/g, '') // 移除其他非法字符
+    .replace(/@/g, '') // 直接删除 @
+    .toLowerCase(); // 转换为小写
+}
 
 function createRootElement(input: string): HTMLElement {
   const name = createAppName(input)
