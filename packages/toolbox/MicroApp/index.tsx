@@ -6,7 +6,7 @@ export interface MicroAppOptions {
 
   store?: (app: App) => Promise<void>;
 
-  router?: (app: App) => Promise<void>;
+  router?: (app: App) => Promise<any>;
 
   plugins?: (app: App) => Promise<void>;
 }

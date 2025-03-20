@@ -23,6 +23,8 @@ export const MicroTeleport = defineComponent<MicroTeleportProps>({
   name: "MicroTeleport",
   props: microTeleportProps,
   setup(_, { slots }) {
+    const pureDiv = (window as any).microApp.pureCreateElement('div')
+    console.log(pureDiv)
     return () => {
       return slots.default?.()
     }
